@@ -35,10 +35,12 @@ contract('RegistryApps-TokenWizard', function(accounts) {
   let registryUtils
   let registryGetters
 
+  let networkID
+
   // Before - deploy storage contract and script registry contracts
   before(async () => {
     storage = await AbstractStorage.new().should.be.fulfilled
-    //  exec = await ScriptExec.new().should.be.fulfilled
+    exec = await ScriptExec.new(scriptUpdater, storage.address, web3.sha3(scriptUpdater)).should.be.fulfilled
 
     registryUtils = await RegistryUtils.new().should.be.fulfilled
     registryGetters = await RegistryGetters.new().should.be.fulfilled
@@ -77,6 +79,7 @@ contract('RegistryApps-TokenWizard', function(accounts) {
     // Get the context bytes array for the script updater
     registryContext = await registryUtils.getContext.call(registryExecId, scriptUpdater, 0)
     registryContext.should.not.eq('0x')
+    networkID = await web3.version.network
   })
 
   // 'after' hook - displays information about script registry and storage contracts
@@ -90,6 +93,7 @@ contract('RegistryApps-TokenWizard', function(accounts) {
     console.log("AppConsole address: " + appConsole.address)
     console.log("VersionConsole address: " + versionConsole.address)
     console.log("ImplementationConsole address: " + implConsole.address)
+    console.log("ScriptExec address: " + exec.address)
     console.log("=====================================")
   })
 
@@ -136,6 +140,19 @@ contract('RegistryApps-TokenWizard', function(accounts) {
       console.log("TokenTransfer address: " + tokenTransfer.address)
       console.log("TokenTransferFrom address: " + tokenTransferFrom.address)
       console.log("TokenApprove address: " + tokenApprove.address)
+      console.log("=====================================")
+
+      //generates .env variables:
+      console.log(`REACT_APP_REGISTRY_STORAGE_ADDRESS='{"${networkID}":"${storage.address}"}'`)
+      console.log(`REACT_APP_INIT_REGISTRY_ADDRESS='{"${networkID}":"${initRegistry.address}"}'`)
+      console.log(`REACT_APP_APP_CONSOLE_ADDRESS='{"${networkID}":"${appConsole.address}"}'`)
+      console.log(`REACT_APP_VERSION_CONSOLE_ADDRESS='{"${networkID}":"${versionConsole.address}"}'`)
+      console.log(`REACT_APP_IMPLEMENTATION_CONSOLE_ADDRESS='{"${networkID}":"${implConsole.address}"}'`)
+      console.log(`REACT_APP_SCRIPT_EXEC_ADDRESS='{"${networkID}":"${exec.address}"}'`)
+      console.log(`REACT_APP_MINTED_CAPPED_CROWDSALE_INIT_CROWDSALE_ADDRESS='{"${networkID}":"${initCrowdsale.address}"}'`)
+      console.log(`REACT_APP_MINTED_CAPPED_CROWDSALE_TOKEN_CONSOLE_ADDRESS='{"${networkID}":"${tokenConsole.address}"}'`)
+      console.log(`REACT_APP_MINTED_CAPPED_CROWDSALE_CROWDSALE_CONSOLE_ADDRESS='{"${networkID}":"${crowdsaleConsole.address}"}'`)
+      console.log(`REACT_APP_MINTED_CAPPED_CROWDSALE_CROWDSALE_BUY_TOKENS_ADDRESS='{"${networkID}":"${crowdsaleBuy.address}"}'`)
       console.log("=====================================")
     })
 
