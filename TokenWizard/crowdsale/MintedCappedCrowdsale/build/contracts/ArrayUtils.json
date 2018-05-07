@@ -1,24 +1,24 @@
 {
   "contractName": "ArrayUtils",
   "abi": [],
-  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820368f67dd5126e370665ff11176388bdb8fa2d2f82bd44f504fed2175cfa033530029",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820368f67dd5126e370665ff11176388bdb8fa2d2f82bd44f504fed2175cfa033530029",
+  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820067420bc50802962ce40312e93f02b05ac869c6a5244be2fced80a1a639b74890029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a72305820067420bc50802962ce40312e93f02b05ac869c6a5244be2fced80a1a639b74890029",
   "sourceMap": "26:452:4:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
   "deployedSourceMap": "26:452:4:-;;;;;;;;",
   "source": "pragma solidity ^0.4.23;\n\nlibrary ArrayUtils {\n\n  function toUintArr(bytes32[] memory arr) internal pure returns (uint[] memory converted) {\n    assembly {\n      converted := arr\n    }\n  }\n\n  function toIntArr(bytes32[] memory arr) internal pure returns (int[] memory converted) {\n    assembly {\n      converted := arr\n    }\n  }\n\n  function toAddressArr(bytes32[] memory arr) internal pure returns (address[] memory converted) {\n    assembly {\n      converted := arr\n    }\n  }\n}\n",
-  "sourcePath": "/Users/viktor/Documents/POANetwork/auth-os-applications-myfork/TokenWizard/crowdsale/MintedCappedCrowdsale/contracts/lib/ArrayUtils.sol",
+  "sourcePath": "/Users/viktorbaranov/Documents/POANetwork/auth-os-applications-myfork/TokenWizard/crowdsale/MintedCappedCrowdsale/contracts/lib/ArrayUtils.sol",
   "ast": {
-    "absolutePath": "/Users/viktor/Documents/POANetwork/auth-os-applications-myfork/TokenWizard/crowdsale/MintedCappedCrowdsale/contracts/lib/ArrayUtils.sol",
+    "absolutePath": "/Users/viktorbaranov/Documents/POANetwork/auth-os-applications-myfork/TokenWizard/crowdsale/MintedCappedCrowdsale/contracts/lib/ArrayUtils.sol",
     "exportedSymbols": {
       "ArrayUtils": [
-        6157
+        6169
       ]
     },
-    "id": 6158,
+    "id": 6170,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6123,
+        "id": 6135,
         "literals": [
           "solidity",
           "^",
@@ -34,16 +34,16 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6157,
+        "id": 6169,
         "linearizedBaseContracts": [
-          6157
+          6169
         ],
         "name": "ArrayUtils",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 6133,
+              "id": 6145,
               "nodeType": "Block",
               "src": "139:49:4",
               "statements": [
@@ -51,7 +51,7 @@
                   "externalReferences": [
                     {
                       "arr": {
-                        "declaration": 6126,
+                        "declaration": 6138,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "175:3:4",
@@ -60,7 +60,7 @@
                     },
                     {
                       "converted": {
-                        "declaration": 6130,
+                        "declaration": 6142,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "162:9:4",
@@ -68,7 +68,7 @@
                       }
                     }
                   ],
-                  "id": 6132,
+                  "id": 6144,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    converted := arr\n}",
                   "src": "145:43:4"
@@ -76,7 +76,7 @@
               ]
             },
             "documentation": null,
-            "id": 6134,
+            "id": 6146,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -84,15 +84,15 @@
             "name": "toUintArr",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6127,
+              "id": 6139,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6126,
+                  "id": 6138,
                   "name": "arr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6134,
+                  "scope": 6146,
                   "src": "69:20:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -102,7 +102,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6124,
+                      "id": 6136,
                       "name": "bytes32",
                       "nodeType": "ElementaryTypeName",
                       "src": "69:7:4",
@@ -111,7 +111,7 @@
                         "typeString": "bytes32"
                       }
                     },
-                    "id": 6125,
+                    "id": 6137,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "69:9:4",
@@ -128,15 +128,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 6131,
+              "id": 6143,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6130,
+                  "id": 6142,
                   "name": "converted",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6134,
+                  "scope": 6146,
                   "src": "114:23:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -146,7 +146,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6128,
+                      "id": 6140,
                       "name": "uint",
                       "nodeType": "ElementaryTypeName",
                       "src": "114:4:4",
@@ -155,7 +155,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 6129,
+                    "id": 6141,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "114:6:4",
@@ -170,7 +170,7 @@
               ],
               "src": "113:25:4"
             },
-            "scope": 6157,
+            "scope": 6169,
             "src": "50:138:4",
             "stateMutability": "pure",
             "superFunction": null,
@@ -178,7 +178,7 @@
           },
           {
             "body": {
-              "id": 6144,
+              "id": 6156,
               "nodeType": "Block",
               "src": "279:49:4",
               "statements": [
@@ -186,7 +186,7 @@
                   "externalReferences": [
                     {
                       "arr": {
-                        "declaration": 6137,
+                        "declaration": 6149,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "315:3:4",
@@ -195,7 +195,7 @@
                     },
                     {
                       "converted": {
-                        "declaration": 6141,
+                        "declaration": 6153,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "302:9:4",
@@ -203,7 +203,7 @@
                       }
                     }
                   ],
-                  "id": 6143,
+                  "id": 6155,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    converted := arr\n}",
                   "src": "285:43:4"
@@ -211,7 +211,7 @@
               ]
             },
             "documentation": null,
-            "id": 6145,
+            "id": 6157,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -219,15 +219,15 @@
             "name": "toIntArr",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6138,
+              "id": 6150,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6137,
+                  "id": 6149,
                   "name": "arr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6145,
+                  "scope": 6157,
                   "src": "210:20:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -237,7 +237,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6135,
+                      "id": 6147,
                       "name": "bytes32",
                       "nodeType": "ElementaryTypeName",
                       "src": "210:7:4",
@@ -246,7 +246,7 @@
                         "typeString": "bytes32"
                       }
                     },
-                    "id": 6136,
+                    "id": 6148,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "210:9:4",
@@ -263,15 +263,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 6142,
+              "id": 6154,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6141,
+                  "id": 6153,
                   "name": "converted",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6145,
+                  "scope": 6157,
                   "src": "255:22:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -281,7 +281,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6139,
+                      "id": 6151,
                       "name": "int",
                       "nodeType": "ElementaryTypeName",
                       "src": "255:3:4",
@@ -290,7 +290,7 @@
                         "typeString": "int256"
                       }
                     },
-                    "id": 6140,
+                    "id": 6152,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "255:5:4",
@@ -305,7 +305,7 @@
               ],
               "src": "254:24:4"
             },
-            "scope": 6157,
+            "scope": 6169,
             "src": "192:136:4",
             "stateMutability": "pure",
             "superFunction": null,
@@ -313,7 +313,7 @@
           },
           {
             "body": {
-              "id": 6155,
+              "id": 6167,
               "nodeType": "Block",
               "src": "427:49:4",
               "statements": [
@@ -321,7 +321,7 @@
                   "externalReferences": [
                     {
                       "arr": {
-                        "declaration": 6148,
+                        "declaration": 6160,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "463:3:4",
@@ -330,7 +330,7 @@
                     },
                     {
                       "converted": {
-                        "declaration": 6152,
+                        "declaration": 6164,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "450:9:4",
@@ -338,7 +338,7 @@
                       }
                     }
                   ],
-                  "id": 6154,
+                  "id": 6166,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    converted := arr\n}",
                   "src": "433:43:4"
@@ -346,7 +346,7 @@
               ]
             },
             "documentation": null,
-            "id": 6156,
+            "id": 6168,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -354,15 +354,15 @@
             "name": "toAddressArr",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6149,
+              "id": 6161,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6148,
+                  "id": 6160,
                   "name": "arr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6156,
+                  "scope": 6168,
                   "src": "354:20:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -372,7 +372,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6146,
+                      "id": 6158,
                       "name": "bytes32",
                       "nodeType": "ElementaryTypeName",
                       "src": "354:7:4",
@@ -381,7 +381,7 @@
                         "typeString": "bytes32"
                       }
                     },
-                    "id": 6147,
+                    "id": 6159,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "354:9:4",
@@ -398,15 +398,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 6153,
+              "id": 6165,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6152,
+                  "id": 6164,
                   "name": "converted",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6156,
+                  "scope": 6168,
                   "src": "399:26:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -416,7 +416,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6150,
+                      "id": 6162,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "399:7:4",
@@ -425,7 +425,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 6151,
+                    "id": 6163,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "399:9:4",
@@ -440,31 +440,31 @@
               ],
               "src": "398:28:4"
             },
-            "scope": 6157,
+            "scope": 6169,
             "src": "332:144:4",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 6158,
+        "scope": 6170,
         "src": "26:452:4"
       }
     ],
     "src": "0:479:4"
   },
   "legacyAST": {
-    "absolutePath": "/Users/viktor/Documents/POANetwork/auth-os-applications-myfork/TokenWizard/crowdsale/MintedCappedCrowdsale/contracts/lib/ArrayUtils.sol",
+    "absolutePath": "/Users/viktorbaranov/Documents/POANetwork/auth-os-applications-myfork/TokenWizard/crowdsale/MintedCappedCrowdsale/contracts/lib/ArrayUtils.sol",
     "exportedSymbols": {
       "ArrayUtils": [
-        6157
+        6169
       ]
     },
-    "id": 6158,
+    "id": 6170,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6123,
+        "id": 6135,
         "literals": [
           "solidity",
           "^",
@@ -480,16 +480,16 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6157,
+        "id": 6169,
         "linearizedBaseContracts": [
-          6157
+          6169
         ],
         "name": "ArrayUtils",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 6133,
+              "id": 6145,
               "nodeType": "Block",
               "src": "139:49:4",
               "statements": [
@@ -497,7 +497,7 @@
                   "externalReferences": [
                     {
                       "arr": {
-                        "declaration": 6126,
+                        "declaration": 6138,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "175:3:4",
@@ -506,7 +506,7 @@
                     },
                     {
                       "converted": {
-                        "declaration": 6130,
+                        "declaration": 6142,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "162:9:4",
@@ -514,7 +514,7 @@
                       }
                     }
                   ],
-                  "id": 6132,
+                  "id": 6144,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    converted := arr\n}",
                   "src": "145:43:4"
@@ -522,7 +522,7 @@
               ]
             },
             "documentation": null,
-            "id": 6134,
+            "id": 6146,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -530,15 +530,15 @@
             "name": "toUintArr",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6127,
+              "id": 6139,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6126,
+                  "id": 6138,
                   "name": "arr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6134,
+                  "scope": 6146,
                   "src": "69:20:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -548,7 +548,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6124,
+                      "id": 6136,
                       "name": "bytes32",
                       "nodeType": "ElementaryTypeName",
                       "src": "69:7:4",
@@ -557,7 +557,7 @@
                         "typeString": "bytes32"
                       }
                     },
-                    "id": 6125,
+                    "id": 6137,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "69:9:4",
@@ -574,15 +574,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 6131,
+              "id": 6143,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6130,
+                  "id": 6142,
                   "name": "converted",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6134,
+                  "scope": 6146,
                   "src": "114:23:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -592,7 +592,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6128,
+                      "id": 6140,
                       "name": "uint",
                       "nodeType": "ElementaryTypeName",
                       "src": "114:4:4",
@@ -601,7 +601,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 6129,
+                    "id": 6141,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "114:6:4",
@@ -616,7 +616,7 @@
               ],
               "src": "113:25:4"
             },
-            "scope": 6157,
+            "scope": 6169,
             "src": "50:138:4",
             "stateMutability": "pure",
             "superFunction": null,
@@ -624,7 +624,7 @@
           },
           {
             "body": {
-              "id": 6144,
+              "id": 6156,
               "nodeType": "Block",
               "src": "279:49:4",
               "statements": [
@@ -632,7 +632,7 @@
                   "externalReferences": [
                     {
                       "arr": {
-                        "declaration": 6137,
+                        "declaration": 6149,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "315:3:4",
@@ -641,7 +641,7 @@
                     },
                     {
                       "converted": {
-                        "declaration": 6141,
+                        "declaration": 6153,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "302:9:4",
@@ -649,7 +649,7 @@
                       }
                     }
                   ],
-                  "id": 6143,
+                  "id": 6155,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    converted := arr\n}",
                   "src": "285:43:4"
@@ -657,7 +657,7 @@
               ]
             },
             "documentation": null,
-            "id": 6145,
+            "id": 6157,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -665,15 +665,15 @@
             "name": "toIntArr",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6138,
+              "id": 6150,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6137,
+                  "id": 6149,
                   "name": "arr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6145,
+                  "scope": 6157,
                   "src": "210:20:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -683,7 +683,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6135,
+                      "id": 6147,
                       "name": "bytes32",
                       "nodeType": "ElementaryTypeName",
                       "src": "210:7:4",
@@ -692,7 +692,7 @@
                         "typeString": "bytes32"
                       }
                     },
-                    "id": 6136,
+                    "id": 6148,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "210:9:4",
@@ -709,15 +709,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 6142,
+              "id": 6154,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6141,
+                  "id": 6153,
                   "name": "converted",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6145,
+                  "scope": 6157,
                   "src": "255:22:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -727,7 +727,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6139,
+                      "id": 6151,
                       "name": "int",
                       "nodeType": "ElementaryTypeName",
                       "src": "255:3:4",
@@ -736,7 +736,7 @@
                         "typeString": "int256"
                       }
                     },
-                    "id": 6140,
+                    "id": 6152,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "255:5:4",
@@ -751,7 +751,7 @@
               ],
               "src": "254:24:4"
             },
-            "scope": 6157,
+            "scope": 6169,
             "src": "192:136:4",
             "stateMutability": "pure",
             "superFunction": null,
@@ -759,7 +759,7 @@
           },
           {
             "body": {
-              "id": 6155,
+              "id": 6167,
               "nodeType": "Block",
               "src": "427:49:4",
               "statements": [
@@ -767,7 +767,7 @@
                   "externalReferences": [
                     {
                       "arr": {
-                        "declaration": 6148,
+                        "declaration": 6160,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "463:3:4",
@@ -776,7 +776,7 @@
                     },
                     {
                       "converted": {
-                        "declaration": 6152,
+                        "declaration": 6164,
                         "isOffset": false,
                         "isSlot": false,
                         "src": "450:9:4",
@@ -784,7 +784,7 @@
                       }
                     }
                   ],
-                  "id": 6154,
+                  "id": 6166,
                   "nodeType": "InlineAssembly",
                   "operations": "{\n    converted := arr\n}",
                   "src": "433:43:4"
@@ -792,7 +792,7 @@
               ]
             },
             "documentation": null,
-            "id": 6156,
+            "id": 6168,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -800,15 +800,15 @@
             "name": "toAddressArr",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6149,
+              "id": 6161,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6148,
+                  "id": 6160,
                   "name": "arr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6156,
+                  "scope": 6168,
                   "src": "354:20:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -818,7 +818,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6146,
+                      "id": 6158,
                       "name": "bytes32",
                       "nodeType": "ElementaryTypeName",
                       "src": "354:7:4",
@@ -827,7 +827,7 @@
                         "typeString": "bytes32"
                       }
                     },
-                    "id": 6147,
+                    "id": 6159,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "354:9:4",
@@ -844,15 +844,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 6153,
+              "id": 6165,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6152,
+                  "id": 6164,
                   "name": "converted",
                   "nodeType": "VariableDeclaration",
-                  "scope": 6156,
+                  "scope": 6168,
                   "src": "399:26:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -862,7 +862,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 6150,
+                      "id": 6162,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "399:7:4",
@@ -871,7 +871,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 6151,
+                    "id": 6163,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "399:9:4",
@@ -886,14 +886,14 @@
               ],
               "src": "398:28:4"
             },
-            "scope": 6157,
+            "scope": 6169,
             "src": "332:144:4",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 6158,
+        "scope": 6170,
         "src": "26:452:4"
       }
     ],
@@ -905,5 +905,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-03T09:24:31.058Z"
+  "updatedAt": "2018-05-07T15:29:28.391Z"
 }
